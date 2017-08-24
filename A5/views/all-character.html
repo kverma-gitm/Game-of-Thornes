@@ -15,6 +15,6 @@
 <div ng-repeat="character in main.characters| orderBy: !mytoggle2? 'aliases[0]':'-aliases[0]' | filter:searchByName2" style="cursor: pointer;">
 
 <a ng-href="#/character/{{character.aliases[0]}}">
-    <h5>Name : {{character.aliases[0]}}<br>
-    Gender : {{character.gender}}</h5><br>
+   <h5 style="color:rgb(244, 169, 65)">Name : {{character.aliases[0]}}</h5>
+    <h5 style="color:rgb(149, 65, 244)" >Gender : {{character.gender}}</h5><br>
 </div>
