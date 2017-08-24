@@ -22,8 +22,8 @@
 <div class="box1 effect" ng-repeat="book in main.books | orderBy: !mytoggle1? 'name':'-name' | filter:searchByName | filter:searchByBookName" style="cursor: pointer;">
   <a ng-href="#/book/{{book.name}}">
     <div>
-      <p><i class="fa fa-book" aria-hidden="true"></i> {{$index +1}}</p>
-      <h5>Name : {{book.name}} <br> Published By : {{book.publisher}}</span></h5>
+     <p><i class="fa fa-book" aria-hidden="true"></i> {{$index +1}}</p>
+      <h5 style="color:red">Name : {{book.name}}</h5> <br> <h5 style="color:blue">Published By : {{book.publisher}}</span></h5>
     </div>
   </a>
 </div>
