@@ -1,0 +1,26 @@
+
+<!-- This html shows the names of all the houses -->
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <a class="btn btn-md btn-block" ng-click="mytoggle3=!mytoggle3"><span class="glyphicon glyphicon-filter"></span>Sort Houses by Name</a>
+    </div>
+    <div class="col-md-4 ">
+      <div class="input-group btn-block has-success" style="padding: 5px;">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-filter"></span> Name</span>
+        <input type="text" class="form-control inputdefault " ng-model="searchByName3.name" placeholder="Enter Name To Search" />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="input-group btn-block has-success" style="padding: 5px;">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-filter"></span> Region</span>
+        <input type="text" class="form-control inputdefault " ng-model="searchByregion3.region" placeholder="Enter Region Name To Search" />
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-repeat="house in main.houses | orderBy: !mytoggle1? 'name':'-name' | filter:searchByName3 | filter:searchByregion3">
+<a ng-href="#/houses/{{house.name}}">
+    <h5>Name : {{house.name}}</h5>
+    <h5>Region : {{house.region}}</h5><br>
+</div>

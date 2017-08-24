@@ -1,0 +1,13 @@
+<!-- This html shows the data of the clicked book -->
+<div class="row" ng-init="book.loadBook()">
+	<ol style="list-style-type: none;text-align: center;font-size: 2em;">
+<li><b>Name of Book : </b>{{book.bookName}}</li>
+<li><b>Author : </b>{{book.author}}</li>
+<li><b>Origin Country : </b>{{book.origin}}</li>
+<li><b>Numer of Pages : </b>{{book.totalPages}}</li>
+<li><b>Media Type : </b>{{book.mediaType}}</li>
+<li><b>Publisher : </b>{{book.publisher}}</li>
+<li><b>Released Date : </b>{{book.releasedDate | date:'medium'}}</li>
+<li><b>Number of Characters : </b>{{book.totalCharacters}}</li>
+</ol>
+</div>

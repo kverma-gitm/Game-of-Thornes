@@ -1,0 +1,20 @@
+<!-- This html shows the names of all the characters -->
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <a class="btn btn-md btn-block" ng-click="mytoggle2=!mytoggle2"><span class="glyphicon glyphicon-filter"></span>Sort Character by Name</a>
+    </div>
+    <div class="col-md-4 ">
+      <div class="input-group btn-block has-success" style="padding: 5px;">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-filter"></span> Character</span>
+        <input type="text" class="form-control inputdefault " ng-model="searchByName2" placeholder="Enter Name" />
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-repeat="character in main.characters| orderBy: !mytoggle2? 'aliases[0]':'-aliases[0]' | filter:searchByName2" style="cursor: pointer;">
+
+<a ng-href="#/character/{{character.aliases[0]}}">
+    <h5>Name : {{character.aliases[0]}}<br>
+    Gender : {{character.gender}}</h5><br>
+</div>

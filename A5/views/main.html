@@ -1,0 +1,36 @@
+<!-- This is main html -->
+<section class="mainSection" >
+  <div class="container-fluid" >
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <div class="container-fluid buttonSection">
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-lg btn-primary btn-block" ng-click="main.shBooks()"><span class="glyphicon glyphicon-book"></span>Books</a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-lg btn-success btn-block" ng-click="main.shCharacter()"><span class="glyphicon glyphicon-user">  </span>Characters</a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-lg btn-danger btn-block" ng-click="main.shHouse()"><span class="glyphicon glyphicon-home">  </span>     Houses</a>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+<div>
+<div class="books" ng-show="main.bookShow" ><book-data></book-data><!-- all-book.html with be shown using bookdata directive -->
+</div>
+<div class="characters" ng-show="main.characterShow" ><!-- all-character.html with be shown using characterdata directive -->
+	<character-data></character-data>
+</div>
+<div class="houses" ng-show="main.houseShow" ><!-- all-house.html with be shown using housedata directive -->
+	<house-data></house-data>
+</div>
+</div>	
+</div>
+</div>
+</div>
+</section>
+

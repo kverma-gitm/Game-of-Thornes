@@ -1,0 +1,29 @@
+<!-- This html shows the names of all the books -->
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <a class="btn btn-md btn-block" ng-click="mytoggle1=!mytoggle1"><span class="glyphicon glyphicon-filter"></span>Sort Books by Name</a>
+    </div>
+    <div class="col-md-4 ">
+      <div class="input-group btn-block has-success" style="padding: 5px;">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-filter"></span> Publisher</span>
+        <input type="text" class="form-control inputdefault " ng-model="searchByName.publisher" placeholder="Enter Publisher Name To Search" />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="input-group btn-block has-success" style="padding: 5px;">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-filter"></span> Book</span>
+        <input type="text" class="form-control inputdefault " ng-model="searchByBookName.name" placeholder="Enter Book Name To Search" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="box1 effect" ng-repeat="book in main.books | orderBy: !mytoggle1? 'name':'-name' | filter:searchByName | filter:searchByBookName" style="cursor: pointer;">
+  <a ng-href="#/book/{{book.name}}">
+    <div>
+      <p><i class="fa fa-book" aria-hidden="true"></i> {{$index +1}}</p>
+      <h5>Name : {{book.name}} <br> Published By : {{book.publisher}}</span></h5>
+    </div>
+  </a>
+</div>

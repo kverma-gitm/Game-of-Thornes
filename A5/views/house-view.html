@@ -1,0 +1,12 @@
+<!-- This html shows the data of the clicked house -->
+<div class="row" ng-init="house.loadHouse()">
+	<ol style="list-style-type: none;text-align: center;font-size: 2em;">
+		<li><b>Name of House:</b>{{house.houseName}}</li>
+		<li><b>About the House:</b>{{house.description}}</li>
+		<li><b>Died Out:</b>{{house.diedOut}}</li>
+		<li><b>Founded:</b>{{house.founded}}</li>
+		<li><b>Founder:</b>{{house.founder.name}}</li>
+		<li><b>Region:</b>{{house.region}}</li>
+		<li><b>House Quote:</b>{{house.words}}</li>
+	</ol>
+</div>    
