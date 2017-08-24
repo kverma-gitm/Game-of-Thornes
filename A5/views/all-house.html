@@ -21,6 +21,6 @@
 </div>
 <div ng-repeat="house in main.houses | orderBy: !mytoggle1? 'name':'-name' | filter:searchByName3 | filter:searchByregion3">
 <a ng-href="#/houses/{{house.name}}">
-    <h5>Name : {{house.name}}</h5>
-    <h5>Region : {{house.region}}</h5><br>
+    <h5 style="color:rgb(65, 244, 142)">Name : {{house.name}}</h5>
+    <h5 style="color:rgb(121, 244, 65)">Region : {{house.region}}</h5><br>
 </div>
